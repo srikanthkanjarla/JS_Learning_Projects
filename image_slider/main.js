@@ -23,21 +23,17 @@ const prevSlideIndex = () =>{
 }
 
 const changeSlide = () => {
-timerID = setTimeout(()=>{
         imageElement.setAttribute('src',`images/${sliderImages[currentIndex]}.jpg`);
-},300);
 }
  
 //next slide button
 nextSlideButton.addEventListener('click',(event)=>{
     nextSlideIndex();
     changeSlide();
-})
+});
 
 //prev slide button
 prevSlideButton.addEventListener('click',(event)=>{
     prevSlideIndex();
     changeSlide();
-})
-clearTimeout(timerID);
-
+});
