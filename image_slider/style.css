@@ -1,19 +1,21 @@
 .slider-container {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
-.slider-container > img {
-  max-width: 100%;
-  max-height: 80vh;
+.slider-container>img {
+    max-width: 100%;
+    max-height: 80vh;
 }
 
 .prev-link,
 .next-link {
-  padding: 0 1.2rem;
-  font-size: 2rem;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+    padding: 0 1rem;
+    margin: 0 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f8333c;
 }
