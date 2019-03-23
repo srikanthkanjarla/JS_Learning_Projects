@@ -10,11 +10,17 @@
   <body>
     <div class="container">
       <div class="slider-container" id="slider">
-        <button type="button" class="prev-link" id="prev">&lt;</button>
+        <button type="button" class="btn" id="prev">&lt;</button>
         <img src="./images/img_1.jpg" alt="" id="image" />
-        <button type="button" class="next-link" id="next">&gt;</button>
+        <button type="button" class="btn" id="next">&gt;</button>
+        <div class="bullet-links" id="bullet-btns">
+          <button type="button" class="jump-btn active" data-index=0></button>
+          <button type="button" class="jump-btn" data-index=1></button>
+          <button type="button" class="jump-btn" data-index=2></button>
+          <button type="button" class="jump-btn" data-index=3></button>
+          <button type="button" class="jump-btn" data-index=4></button>         
+        </div>
       </div>
-    </div>
     <script src="main.js"></script>
   </body>
 </html>
