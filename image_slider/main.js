@@ -30,27 +30,47 @@ const changeSlide = () => {
     imageElement.setAttribute('src',`images/${sliderImages[currentIndex]}.jpg`);
     active[0].className = active[0].className.replace('active','');
     document.querySelector(`.jump-btn:nth-child(${key})`).classList.add('active');
-
 }
 
 //next slide button
 nextSlideButton.addEventListener('click',(event)=>{
     nextSlideIndex();
     changeSlide();
+    resetAutoRun();
 });
 
 //prev slide button
 prevSlideButton.addEventListener('click',(event)=>{
     prevSlideIndex();
     changeSlide();
+    resetAutoRun();
 });
 
-//jump to the slide
+//jump to the slide on clicking a bullet button at the bottom of the slide
   jumpToSlideButtons.addEventListener('click',(event)=>{
   currentIndex = parseInt(event.target.getAttribute('data-index'),10);
   changeSlide();
+  resetAutoRun();
   })
 
 //auto run the slider
+let intervalID='';
+let timerID = '';
+const autoRunSlider =()=>{
+   intervalID = setInterval(()=>{
+        nextSlideIndex();
+        changeSlide();
+    },4000);
+}
+
+//reset auto run slider
+const resetAutoRun =()=>{
+    clearInterval(intervalID);
+    timerID=setTimeout(autoRunSlider,100);
+}
+autoRunSlider();
+clearTimeout(timerID);
+
+
 
  
