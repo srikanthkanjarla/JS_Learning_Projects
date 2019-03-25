@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Text+Me+One");
+
+body {
+  margin: 0 10rem;
+  font-family: "Text Me One", sans-serif;
+  font-size: 1.5rem;
+}
+
+.title {
+  text-align: center;
+  padding: 1.4rem 0;
+}
+
+img {
+  max-width: 400px;
+  margin: 10px;
+}
+
+.sec-two img,
+.sec-five img {
+  float: right;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px greenyellow;
+  shape-outside: circle();
+}
+
+.sec-three img {
+  float: left;
+}
+
+.sec-four figure {
+  text-align: center;
+}
