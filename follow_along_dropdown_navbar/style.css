@@ -74,3 +74,12 @@ li {
 .open {
     opacity: 1;
 }
+
+.github-link {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: center;
+}
