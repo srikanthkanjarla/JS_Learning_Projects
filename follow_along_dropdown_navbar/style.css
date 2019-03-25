@@ -1,51 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
 body {
-  padding: 0;
-  margin: 0;
-  background-color: #e25242;
+    padding: 0;
+    margin: 0;
+    background-color: #e25242;
+    font-family: "Roboto", sans-serif;
 }
 
 li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
-.navbar {
-  border: 1px solid #fa8072;
-  color: #eeeeee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.navbar>ul {
+    background-color: #191919;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.navbar > li {
-  margin: 0 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 1rem;
+.menu-item {
+    margin: 0 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 1rem;
 }
 
-.menu-item > div {
-  display: none;
+.menu-active {
+    color: #eeeeee;
 }
 
-.menu-item:hover > div {
-  display: flex;
-  justify-content: center;
+.dropdown {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    color: #333222;
+    transform: translate(-40%, 16px);
+    transition: all 0.5s ease-in;
+    justify-content: center;
 }
 
-.submenu {
-  position: absolute;
-  top: 45px;
-  color: #555555;
+.item-three .dropdown {
+    transform: translate(-20%, 16px);
 }
 
-.submenu-col > ul > li {
-  padding: 0.5rem;
+.trigger .dropdown {
+    display: flex;
 }
 
-.submenu-bg {
-  height: 220px;
-  width: 220px;
-  background: #eeeeee;
-  box-shadow: 0 0 3px 0 #e25242;
+.trigger-active .dropdown {
+    opacity: 1;
+}
+
+.column>ul>li {
+    padding: 0.5rem;
+    font-weight: 400;
+}
+
+.column .category {
+    font-weight: 800;
+}
+
+.dropdown-background {
+    background: #eeeeee;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.4s, opacity 0.1s, transfrom 0.2s;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.open {
+    opacity: 1;
 }
