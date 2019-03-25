@@ -1,17 +1,16 @@
 const menuItems = document.querySelectorAll('.menu-item');
 const dropdownBackground = document.querySelector('.dropdown-background');
-let navbar = document.querySelector('.navbar');
+ 
  
 
 //handle mouse over on menu item
 function handleMouseEnter(){     
-    let dropdown = this.querySelector('.dropdown');
-    this.classList.add('menu-active');
-    dropdownBackground.classList.add('open');
-    this.classList.add('trigger');
+    let dropdown = this.querySelector('.dropdown'); //get active menu item's dropdown 
+    dropdownBackground.classList.add('open'); // change opacity:0 to opacity:1
+    this.classList.add('trigger'); // change display:none to display:flex
+    // change opacity:0 to opacity:1 after 2seconds
     setTimeout(()=>this.classList.contains('trigger')&&this.classList.add('trigger-active'),200);
-    let dropdownCoords = dropdown.getBoundingClientRect();
-    let navCoords = navbar.getBoundingClientRect();
+    let dropdownCoords = dropdown.getBoundingClientRect(); //get size and position of a dropdown menu
 
     let coords = {
         height:dropdownCoords.height,
@@ -19,7 +18,7 @@ function handleMouseEnter(){
         top:dropdownCoords.top,
         left:dropdownCoords.left
     } 
- 
+    // set size and position of dropdown background div
     dropdownBackground.style.setProperty('height',`${coords.height}px`);
     dropdownBackground.style.setProperty('width',`${coords.width}px`);
     dropdownBackground.style.setProperty('top',`${coords.top}px`);
@@ -30,7 +29,7 @@ function handleMouseEnter(){
 //handle mouse leave from menu item
 function handleMouseLeave(){     
     dropdownBackground.classList.remove('open');
-    this.classList.remove('menu-active','trigger','trigger-active');
+    this.classList.remove('trigger','trigger-active');
 }
 
 //event listeners
