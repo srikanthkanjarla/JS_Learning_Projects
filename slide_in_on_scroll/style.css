@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Text+Me+One");
 
 body {
+    padding: 0;
+    margin: 0;
+}
+
+.post {
     margin: 0 10rem;
     font-family: "Text Me One", sans-serif;
     font-size: 1.5rem;
@@ -40,4 +45,11 @@ img {
     opacity: 1;
     transform: translateX(0%);
     transition: opacity 0.3s linear, transform 0.3s linear;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .post {
+        margin: 0 0.4rem;
+    }
 }
