@@ -1,5 +1,5 @@
 //debounce - to limit the rate at which a function can fire on scroll
-function debounce(func, wait=20, immediate=true) {
+function debounce(func, wait=10, immediate=true) {
 	let timeout;
 	return function() {
 		let context = this, args = arguments;
