@@ -1,0 +1,81 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #13262f;
+  color: rgb(233, 230, 255);
+}
+
+h1 {
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+.button {
+  padding: 10px 25px;
+  text-decoration: none;
+  color: #e9e6ff;
+  border: 1px solid #e9e6ff;
+  font-size: 1.4rem;
+}
+
+.split {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+  flex: 1 1 auto;
+  position: relative;
+  z-index: 9;
+}
+
+.split.left {
+  background: url(./images/left.jpg);
+}
+
+.split.right {
+  background: url(./images/right.jpg);
+}
+
+.split.left ::before,
+.split.right ::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 0, 136, 0.7);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.split.right ::after {
+  background: rgba(0, 0, 0, 0.7);
+  right: 0;
+  top: 0;
+}
+
+.split.left:hover {
+  flex: 6 1 auto;
+}
+
+.split.right:hover {
+  flex: 6 1 auto;
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    padding: 10px 15px;
+  }
+}
