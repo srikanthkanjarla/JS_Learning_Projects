@@ -1,55 +1,59 @@
 @import url("https://fonts.googleapis.com/css?family=Text+Me+One");
 
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .post {
-    margin: 0 10rem;
-    font-family: "Text Me One", sans-serif;
-    font-size: 1.5rem;
+  margin: 0 10rem;
+  font-family: "Text Me One", sans-serif;
+  font-size: 1.5rem;
+  text-align: justify;
 }
 
 h4 {
-    color: #4169e1;
+  color: #4169e1;
 }
 
 .title {
-    text-align: center;
-    padding: 1.4rem 0;
+  text-align: center;
+  padding: 1.4rem 0;
 }
 
 img {
-    max-width: 20rem;
-    height: 20rem;
-    opacity: 0;
-    margin: 0 0.8rem;
+  max-width: 20rem;
+  height: 20rem;
+  opacity: 0;
+  margin: 0 2rem;
 }
 
 .align-left {
-    float: left;
-    transform: translateX(-50%);
-    padding: 0 1.2rem;
+  float: left;
+  transform: translateX(-50%);
 }
 
 .align-right {
-    float: right;
-    transform: translateX(50%);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px #adff2f;
-    shape-outside: circle();
+  float: right;
+  transform: translateX(50%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #adff2f;
+  shape-outside: circle();
 }
 
 .active {
-    opacity: 1;
-    transform: translateX(0%);
-    transition: opacity 0.3s linear, transform 0.3s linear;
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 0.3s linear, transform 0.3s linear;
 }
 
 @media only screen and (max-width: 767px) {
+  .post {
+    margin: 0 0.5rem;
+  }
 
-    .post {
-        margin: 0 0.4rem;
-    }
+  img {
+    max-width: 10rem;
+    height: 10rem;
+  }
 }
