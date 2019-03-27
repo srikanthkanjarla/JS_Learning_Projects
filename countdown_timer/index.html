@@ -11,7 +11,22 @@
 
 <body>
     <div class="container">
-
+        <div class="timer-controls">
+            <button data-time=60 type="button">1 Min</button>
+            <button data-time=300 type="button"> 5 Min</button>
+            <button data-time=900 type="button">15 Min</button>
+            <button data-time=1500 type="button">25 Min</button>
+            <button data-time=2400 type="button">40 Min</button>
+            <button data-time=3600 type="button">60 Min</button>
+            <form name="time-form" class="custom-time-form">
+                <input type="text" name='minutes' placeholder="Time in min" class="custom-time">
+            </form>
+        </div>
+        <div class="timer-display">
+            <h1 class="time-left">00:00</h1>
+            <p class="end-time"></p>
+        </div>
+        <button class="reset-timer">Reset</button>
     </div>
     <script src="./main.js"></script>
 </body>
